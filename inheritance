@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace static_constructor
+{
+    class parma_emp : emp                     // parmanent
+    {
+        public int parmasalary;
+        public int parmahours;
+    }
+    class visi_emp : emp                     // visiting
+    {
+        public int visisalary;
+        public int visiparmahours;
+    }
+    class emp                           // employee
+    {
+        public int empage;
+        public int empcontactno;
+        public int empid;
+        public string empname;
+
+    }
+    class inheritance
+    {
+        static void Main()
+        {
+            parma_emp nitesh = new parma_emp();
+            nitesh.empage = 12;
+            nitesh.empcontactno = 85786032;
+            nitesh.empname = "nitesh";
+            nitesh.empid = 231;
+
+            visi_emp nitu = new visi_emp();
+            nitu.empage = 25;
+            nitu.empcontactno = 786032;
+            nitu.empname = "nitu";
+            nitu.empid = 2301;
+            Console.WriteLine(nitesh.empage);
+            Console.WriteLine(nitesh.empname);
+            Console.WriteLine(nitesh.empcontactno);
+            Console.WriteLine(nitesh.empid);
+
+
+            Console.WriteLine("------------------");
+
+            Console.WriteLine(nitu.empage);
+            Console.WriteLine(nitu.empname);
+            Console.WriteLine(nitu.empcontactno);
+            Console.WriteLine(nitu.empid);
+            Console.ReadLine();
+        }
+    }
+}
+
