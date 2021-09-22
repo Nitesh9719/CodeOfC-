@@ -18,7 +18,7 @@ namespace static_constructo
     }
     class derivedclass : baseclass
     {
-        public derivedclass() : base("hey pagal")
+        public derivedclass() : base("hey champ")
         {
             Console.WriteLine("nitesh2");
         }
