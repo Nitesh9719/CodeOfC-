@@ -1,0 +1,35 @@
+using System;
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace static_constructo
+{
+    class baseclass                              ///// parametric inheritance contructor ////
+    {
+        public baseclass( string message)
+        {
+            Console.WriteLine(message);
+
+        }
+
+
+    }
+    class derivedclass : baseclass
+    {
+        public derivedclass() : base("hey pagal")
+        {
+            Console.WriteLine("nitesh2");
+        }
+    }
+    class program
+    {
+        static void Main()
+        {
+            derivedclass kk = new derivedclass();
+
+            Console.ReadLine();
+        }
+    }
+}
