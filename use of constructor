@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace emp
+{
+    class Program
+    {
+        int age;
+        string name;
+        int salary;
+        public Program(int age, string name, int salary)
+        {
+            this.age = age;
+            this.name = name;
+            this.salary = salary;
+
+        }
+        public int getage()
+        {
+            return this.age;
+        }
+        public string getname()
+        {
+            return this.name;
+        }
+        public int getsalary()
+        {
+            return this.age;
+        }
+        static void Main()
+        {
+            Program pp = new Program( 24,"nitesh agrahari",30000);
+            Console.WriteLine("pp age is {0}" ,pp.getage());
+            Console.WriteLine("pp name is {0}", pp.getname());
+            Console.WriteLine("pp salary is {0}", pp.getsalary());
+            Console.WriteLine("...........................");
+            Console.ReadLine();
+        }
+    }
+}
+
