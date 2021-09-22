@@ -1,0 +1,35 @@
+using System;
+
+namespace useof_switch
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("enter the number n ");
+
+            int n = int.Parse(Console.ReadLine());    // this is import...
+            switch (n)
+            {
+                case 10:
+                        Console.WriteLine("right number is 10 ");
+                    break;
+                case 20:
+                    Console.WriteLine("right number is 20 ");
+                    break;
+                case 30:
+                    Console.WriteLine("right number is 30 ");
+                    break;
+                     case 40:
+                        Console.WriteLine("right number is 40 ");
+                    break;
+                default:
+                    Console.WriteLine("wrong number  ");
+                    break;
+            }
+            
+
+
+        }
+    }
+}
