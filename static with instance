@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace static_intence
+{
+
+
+
+
+    class student
+    {
+        public string firstname;
+        public string lastname;
+        public int rollno;
+        public static int fees =10000;
+        public static string college = "ipec";
+    }
+    
+    class program
+    {
+        static void Main()
+        {
+            student nitesh = new student();
+            nitesh.firstname = "NK";
+            nitesh.lastname = "Agrahari";
+            nitesh.rollno = 0036;
+
+                 student kk = new student();
+            kk.firstname = "ab";
+            kk.lastname = "Agr.i";
+            kk.rollno = 003;
+
+
+            Console.WriteLine ( nitesh.rollno);
+            Console.WriteLine(nitesh.firstname);
+            Console.WriteLine(nitesh.lastname);
+            Console.WriteLine(student.college);
+            Console.WriteLine(student.fees);
+            Console.WriteLine("___________..........________");
+
+            Console.WriteLine(kk.rollno);
+            Console.WriteLine(kk.firstname);
+            Console.WriteLine(kk.lastname);
+            Console.WriteLine(student.college);
+            Console.WriteLine(student.fees);
+            Console.ReadLine();
+        }
+    }
+}
+
+
