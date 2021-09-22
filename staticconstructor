@@ -1,0 +1,36 @@
+using System;
+     
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace static_constructor
+{
+    class baseclass
+    {
+        public baseclass()
+        {
+            Console.WriteLine("nitesh1");
+
+        }
+
+
+    }
+    class derivedclass : baseclass
+    {
+        public derivedclass()
+        {
+            Console.WriteLine("nitesh2");
+        }
+    }
+    class program
+    {
+        static void Main()
+        {
+            derivedclass kk = new derivedclass();
+
+
+        }
+    }
+}
+ 
