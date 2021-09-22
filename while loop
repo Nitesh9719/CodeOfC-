@@ -1,0 +1,49 @@
+using System;
+
+namespace use_loop
+{
+    class usedo_while
+    {
+
+        static void Main()
+        {
+        start:
+            int totalcoffeecost = 0;
+            Console.WriteLine(" select coffee size : 1-small, 2-med, 3-lar ");
+            int userchoice = int.Parse(Console.ReadLine());
+            switch (userchoice)
+            {
+                case 1:
+                    totalcoffeecost += 1;
+                    break;
+                case 2:
+                    totalcoffeecost += 2;
+                    break;
+                case 3:
+                    totalcoffeecost += 3;
+                    break;
+                default:
+                    Console.WriteLine(" pls select{0} vailid option", userchoice);
+                    goto start;
+
+            }
+        Decide:
+            Console.WriteLine(" do you wnat another coffee: - yes or No ? ");
+            string userdecision = Console.ReadLine();
+            switch (userdecision.ToUpper())
+
+            {
+                case "YES":
+                    goto start;
+                case "NO":
+                    break;
+                default:
+                    Console.WriteLine(" pls select{0} vailid option", userdecision);
+                    goto Decide;
+
+            }
+            Console.WriteLine("thank for shoping");
+            Console.WriteLine("BILL totalcoffeecost = {0}", totalcoffeecost);
+        }
+    }
+}
