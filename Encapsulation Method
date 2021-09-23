@@ -1,0 +1,77 @@
+using System;
+
+namespace encapsulation
+{
+    class person
+    {
+        string name;
+        int age;
+
+        public void setname(string name)
+        {
+            if (string.IsNullOrEmpty(name) == true)
+            {
+                Console.WriteLine("  name is req");
+            }
+            else
+            {
+                this.name = name;
+
+                Console.WriteLine("  name is " + name);
+            }
+        }
+        public void setage(int age)
+        { 
+            if(age >0)
+            {
+                this.age = age;
+
+            }
+            else
+            {
+                Console.WriteLine(" age is req");
+            }
+             
+        }
+        public void getname( )
+        {
+            if (string.IsNullOrEmpty(name) == true)
+            {
+                //Console.WriteLine("  name is req");
+            }
+             else
+            {
+                this.name = name;
+            }
+           
+        }
+        public void getage()
+        {
+            if (age > 0)
+            {
+                this.age = age;
+                Console.WriteLine(" age is  " + age);
+
+            }
+            Console.WriteLine(" age is {0}" + age);
+
+            }
+        }
+        class Program
+        {
+           static  void Main(string[] args)
+            {
+                person p = new person();
+            p.setname("nitesh");
+                p.getname();
+            p.setage(25);  
+            p.getage();
+              
+                
+                //Console.WriteLine(p.getname);
+
+                Console.ReadLine();
+            }
+        }
+    }
+
