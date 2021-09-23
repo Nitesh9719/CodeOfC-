@@ -1,0 +1,61 @@
+using System;
+
+namespace static_properties
+{
+    class Univer
+    {
+        private static string pname;
+        private static string depname;
+
+        public static string _name
+        {
+            set
+            {                if (string.IsNullOrEmpty(value))
+
+                {
+                    Console.WriteLine("name cannot be Null or Empaty");
+                }
+                else
+                {
+                    pname = value;
+                }
+            }
+            get
+            {
+                return pname;
+            }
+        }
+        public static string _depaname
+        {
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("depname cannot be Null or Empaty");
+                }
+                else
+                {
+                    depname = value;
+                }
+            }
+            get
+            {
+                return depname;
+            }
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Univer._name = "nitesh";
+            Univer._depaname = "";
+            Console.WriteLine("name is " +Univer._name);
+            Console.WriteLine("univercity name  is {0}" , Univer._depaname);
+            Console.ReadLine();
+            
+        }
+    }
+}
