@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace lambda2
+{
+    class lambda2
+
+    {
+        public delegate int myproject(int num);
+
+        
+
+
+            static void Main(string[] args)
+            {
+            // myproject obj = new myproject(Program.show);
+            myproject obj = (a) => a * a * a;
+            Console.WriteLine(obj.Invoke(5));
+            //obj.Invoke(5);
+            //{
+            //    a += 10;
+            //    Console.WriteLine(a);
+            //};
+
+            //Console.ReadLine();
+        }
+    }
+    }
+
+
