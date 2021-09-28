@@ -1,0 +1,29 @@
+using System;
+
+namespace lambda1 // lambda type one this is called statement method
+ 
+{
+    public delegate void myproject(int num);
+    class Program
+    {
+        //public static void show(int a )
+        //{                                                   ----    --->>>>>>>>>  //this is delegate method///
+        //    a += 10;
+        //    Console.WriteLine("result is {0}" , a);
+        //}
+
+
+        static void Main(string[] args)
+        {
+            // myproject obj = new myproject(Program.show);
+            myproject obj =  ( a) =>
+            {
+                a += 10;
+                Console.WriteLine(a);
+            };
+            obj.Invoke(5);
+            Console.ReadLine();
+        }
+    }
+}
+
