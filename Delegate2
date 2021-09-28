@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace delegate_2_multiple
+
+{
+    public delegate void calculation(int a, int b);
+    public delegate void shows();
+    public delegate void calculation2(int num);
+    class Program
+    {
+        public static void square( int num)
+        {
+            int square = num * num;
+            Console.WriteLine(" square of {0} is {1} ", num , square);
+        }
+        public static void cube(int num)
+        {
+            int cube = num * num * num;
+            Console.WriteLine(" cube of {0} is {1} ", num, cube);
+        }
+        public static void show()
+        {
+            
+            Console.WriteLine(" multiple delegate ");
+        }
+        public static void Addition(int a, int b)
+        {
+            int result = a + b;
+            Console.WriteLine(" addition result is {0}", result);
+        }
+        public static void sub(int a, int b)
+        {
+            int result = a - b;
+            Console.WriteLine(" sub result is {0}", result);
+        }
+        public static void multi(int a, int b)
+        {
+            int result = a * b;
+            Console.WriteLine(" multi result is {0}", result);
+        }
+        public static void divi(int a, int b)
+        {
+            int result = a / b;
+            Console.WriteLine(" divi result is {0}", result);
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            calculation obj = new calculation(Program.Addition);
+            //Program.Addition(20, 40);   this is also use for set value
+            obj.Invoke(20, 30);
+            calculation obj1 = new calculation(Program.sub);
+            obj1(50, 30);
+            calculation obj2 = new calculation(Program.multi);
+            obj2(50, 30);
+            calculation obj3 = new calculation(Program.divi);
+            obj3(50, 10);
+
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("---------method num 2 for calling--------------------");
+            Console.WriteLine("-----------------------------");
+
+
+          //   method num 2 for calling//
+            obj = sub;
+            obj(50, 30);
+            obj = multi;
+            obj(50, 30);
+            obj = divi;
+            obj(50, 10);
+
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("--------delegate 2---------------------");
+            Console.WriteLine("-----------------------------");
+            shows s = new shows(show);
+            s.Invoke();
+
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("--------delegate 3---------------------");
+            Console.WriteLine("-----------------------------");
+            calculation2 pow = new calculation2(cube);
+            pow.Invoke(5);
+            pow = square;
+            pow(5);
+            Console.ReadLine();
+                }
+    }
+}
+
