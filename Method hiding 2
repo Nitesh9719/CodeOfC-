@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace method_hiding_2
+{
+    class parent
+    {
+        public string FN;
+        public string LN;
+        public void show()
+        {
+            Console.WriteLine("nitesh" + " " + " ahrahari" + " parent");
+        }
+
+    }
+    class child1  : parent
+    {
+        public new void show()
+        {
+            base.show();
+            Console.WriteLine(FN + " " + LN + " "  + " child1");
+        }
+
+    }
+    class child2 : parent
+    {
+        public new void show()
+        {
+            
+            Console.WriteLine(FN + " " + LN + " " + " child2");
+        }
+
+    }
+
+    class Class1
+    {
+        static void Main()
+        {
+            child1 c1 = new child1();
+            c1.FN = " akash";
+            c1.LN = "kumar";
+            c1.show( );
+
+            child2 c2 = new child2();
+            c2.FN = " rajat";
+            c2.LN = "kumar";
+            c2.show();
+            Console.ReadLine();
+        }
+
+    }
+}
