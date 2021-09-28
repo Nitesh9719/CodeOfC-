@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace abtraction_2
+{
+    abstract class person
+    {
+        public string name;
+        public int age;
+        public long phonenumber;
+        public abstract void showdetails();
+    }
+    class student : person
+    {
+       public int fees;
+       public int rollno;
+        public override void showdetails()
+        {
+            Console.WriteLine("student name is {0}",this.name);
+            Console.WriteLine("student age is {0}", this.age);
+            Console.WriteLine("student phonenumber is {0}", this.phonenumber);
+            Console.WriteLine("student fees is {0}", this.fees);
+            Console.WriteLine("student rollno is {0}", this.rollno);
+
+        }
+    }
+    class teacher : person
+    {
+      public  string qualification;
+      public  int salary;
+        public override void showdetails()
+        {
+            Console.WriteLine("teacher name is {0}", this.name);
+            Console.WriteLine("teacher age is {0}", this.age);
+            Console.WriteLine("teacher phonenumber is {0}", this.phonenumber);
+            Console.WriteLine("teacher qualification is {0}", this.qualification);
+            Console.WriteLine("teacher salary is {0}", this.salary);
+
+
+        }
+    }
+
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            student st = new student();
+            teacher tech = new teacher();
+            st.age =24;
+            st.phonenumber =5485225211552;
+            st.name = "nitesh agrahari";
+            st.rollno =170336;
+            st.fees =155000;
+            st.showdetails();
+            Console.WriteLine("-----------------------");
+            tech.age = 55;
+            tech.phonenumber = 225211552;
+            tech.name = "nitin agrahari";
+            tech.qualification = "Ph.d";
+            tech.salary = 50000;
+            tech.showdetails();
+
+            Console.ReadLine();
+        }
+    }
+}
