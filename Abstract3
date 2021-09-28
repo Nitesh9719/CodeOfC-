@@ -1,0 +1,68 @@
+using System;
+
+namespace abst_2._0
+{
+    abstract class person
+    {
+        public abstract uint id { get; set; }
+        public abstract string name { get; set; }
+    }
+    class student : person
+    {
+        uint studentid;
+        string studentname;
+        public override uint id
+        {
+            set
+            {
+                if(value == 0)
+                {
+                    Console.WriteLine("id cannot be zero");
+                }
+                else
+                {
+                    this.studentid = value;
+                }
+               
+            }
+            get
+            {
+                return studentid;
+            }
+        }
+        public override string name
+        {
+            set
+            {
+                if(string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("name is not null or empty");
+                }
+                else
+                {
+                    this.studentname = value;
+
+                }
+            }
+            get
+            {
+                return studentname;
+            }
+        }
+
+
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                student kk = new student();
+                kk.id = 33;
+                kk.name = " nitesh agrahari";
+                Console.WriteLine(kk.id);
+                Console.WriteLine(kk.name);
+                Console.ReadLine();
+            }
+        }
+    }
+}
