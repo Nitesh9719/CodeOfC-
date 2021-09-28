@@ -1,0 +1,40 @@
+using System;
+
+namespace sealed_Method_overriding
+{
+    class parent
+    {
+        public virtual void show()
+        {
+            Console.WriteLine("Hello nitesh");
+        }
+    }
+       class child : parent
+    {
+        public sealed override void show()
+        {
+            base.show();
+            Console.WriteLine("HelloWorld");
+        }
+    }
+    //class child2 : child
+    //{
+    //    public override void show()
+    //    {                                                child is not call by child2 due to sealed method
+    //        base.show();
+    //        Console.WriteLine("HelloWorld");
+    //    }
+    //}
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            child c = new child();
+            c.show();
+            Console.ReadLine();
+            // Console.WriteLine("Hello World!");
+        }
+    }
+}
+
