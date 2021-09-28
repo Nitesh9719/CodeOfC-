@@ -1,0 +1,57 @@
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace encapsulation_operator_overloading
+{
+    class Newclass
+    {
+        int num;
+        string str;
+        public static Newclass operator +(Newclass obj1, Newclass obj2)
+        {
+            Newclass obj3 = new Newclass();
+            obj3.str = obj1.str + "" + obj2.str;
+            obj3.num = obj1.num + obj2.num;
+            return obj3;
+        }
+
+
+        class prog
+        { 
+            static void Main()
+            {
+                Newclass obj1 = new Newclass();
+                obj1.str = "nitesh";
+                obj1.num = 50;
+                Newclass obj2 = new Newclass();
+                obj2.str = "agrahari";
+                obj2.num = 200;
+
+                Newclass obj3 = new Newclass();
+                obj3 = obj1 + obj2;
+                Console.WriteLine(obj3.str);
+                Console.WriteLine(obj3.num);
+                Console.ReadLine();
+            }
+
+
+        }
+    }
+}
+
+
+
+//using System;
+
+//namespace encapsulation_operator_overloading
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("Hello World!");
+//        }
+//    }
+//}
