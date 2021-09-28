@@ -1,0 +1,65 @@
+using System;
+using System.Text;
+
+using System.Linq;
+
+using System.Threading.Tasks;
+
+
+
+
+namespace indexrs
+{
+    class indexrs
+    {
+        int[] age = new int [3];
+        public int this[int index]
+        {
+
+            set {
+
+                if (index >= 0 && index <= age.Length)
+                {
+                    if ( value > 0)
+                    {
+                        age[index] = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("age is invalid");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine( "index is invalid");
+                }
+                }
+                    
+            get {
+                return age[index];
+            }
+        }
+        public int this[int index , int i]
+        {
+            
+            set { 
+                  age[index]= value + i;
+
+                    }
+            get { return age[index];
+            }
+        }
+            
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            indexrs ind = new indexrs();
+            ind[0, 5] = 2;
+            //ind[2] = 55;
+            Console.WriteLine( ind[0] );
+            Console.ReadLine();
+        }
+    }
+}
