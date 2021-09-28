@@ -1,0 +1,53 @@
+using System;
+
+namespace abtraction
+{
+
+    class employee
+
+    {
+        public int empid;
+        public string empname;
+        public double grossalary;
+        double taxded = .1;
+        double netsalary;
+
+        public employee(int eid, string ename, double egrossalary)
+        {
+            this.empid = eid;
+            this.empname = ename;
+            this.grossalary = egrossalary;
+        }
+        private void calculatesalary()
+        {
+            if (grossalary >= 30000)
+            {
+                netsalary = grossalary - (grossalary * taxded);
+                Console.WriteLine("your salary is {0}", netsalary);
+            }
+            else
+            {
+                Console.WriteLine("your salary is {0}", netsalary);
+            }
+
+        }
+        public void show()
+        {
+            this.calculatesalary();
+            Console.WriteLine("name of employee is {0}", empname);
+            Console.WriteLine("empid of employee is {0}", empid);
+            //Console.WriteLine("salary of employee is {0}", netsalary);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employee nk = new employee(33, "nitesh", 40000);
+            nk.show();
+            Console.ReadLine();
+        }
+    }
+}
